@@ -1,0 +1,5 @@
+C:\Users\Jana.Townsend\Desktop\Fleck-master\src\Fleck\bin\Release\Fleck.dll
+C:\Users\Jana.Townsend\Desktop\Fleck-master\src\Fleck\bin\Release\Fleck.pdb
+C:\Users\Jana.Townsend\Desktop\Fleck-master\src\Fleck\obj\Release\Fleck.csprojResolveAssemblyReference.cache
+C:\Users\Jana.Townsend\Desktop\Fleck-master\src\Fleck\obj\Release\Fleck.dll
+C:\Users\Jana.Townsend\Desktop\Fleck-master\src\Fleck\obj\Release\Fleck.pdb

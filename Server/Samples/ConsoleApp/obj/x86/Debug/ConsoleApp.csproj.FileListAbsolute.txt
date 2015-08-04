@@ -1,0 +1,7 @@
+C:\Users\Jana.Townsend\engine\Server\Samples\ConsoleApp\bin\Debug\Fleck.Samples.ConsoleApp.exe
+C:\Users\Jana.Townsend\engine\Server\Samples\ConsoleApp\bin\Debug\Fleck.Samples.ConsoleApp.pdb
+C:\Users\Jana.Townsend\engine\Server\Samples\ConsoleApp\bin\Debug\Fleck.dll
+C:\Users\Jana.Townsend\engine\Server\Samples\ConsoleApp\bin\Debug\Fleck.pdb
+C:\Users\Jana.Townsend\engine\Server\Samples\ConsoleApp\obj\x86\Debug\ConsoleApp.csprojResolveAssemblyReference.cache
+C:\Users\Jana.Townsend\engine\Server\Samples\ConsoleApp\obj\x86\Debug\Fleck.Samples.ConsoleApp.exe
+C:\Users\Jana.Townsend\engine\Server\Samples\ConsoleApp\obj\x86\Debug\Fleck.Samples.ConsoleApp.pdb

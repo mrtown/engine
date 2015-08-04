@@ -1,0 +1,14 @@
+C:\Users\Jana.Townsend\engine\Server\Fleck.Tests\bin\Debug\Fleck.Tests.dll
+C:\Users\Jana.Townsend\engine\Server\Fleck.Tests\bin\Debug\Fleck.Tests.pdb
+C:\Users\Jana.Townsend\engine\Server\Fleck.Tests\bin\Debug\Fleck.dll
+C:\Users\Jana.Townsend\engine\Server\Fleck.Tests\bin\Debug\Moq.dll
+C:\Users\Jana.Townsend\engine\Server\Fleck.Tests\bin\Debug\nunit.framework.dll
+C:\Users\Jana.Townsend\engine\Server\Fleck.Tests\bin\Debug\nunit.mocks.dll
+C:\Users\Jana.Townsend\engine\Server\Fleck.Tests\bin\Debug\pnunit.framework.dll
+C:\Users\Jana.Townsend\engine\Server\Fleck.Tests\bin\Debug\Fleck.pdb
+C:\Users\Jana.Townsend\engine\Server\Fleck.Tests\bin\Debug\Moq.pdb
+C:\Users\Jana.Townsend\engine\Server\Fleck.Tests\bin\Debug\Moq.xml
+C:\Users\Jana.Townsend\engine\Server\Fleck.Tests\bin\Debug\nunit.framework.xml
+C:\Users\Jana.Townsend\engine\Server\Fleck.Tests\obj\Debug\Fleck.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Jana.Townsend\engine\Server\Fleck.Tests\obj\Debug\Fleck.Tests.dll
+C:\Users\Jana.Townsend\engine\Server\Fleck.Tests\obj\Debug\Fleck.Tests.pdb

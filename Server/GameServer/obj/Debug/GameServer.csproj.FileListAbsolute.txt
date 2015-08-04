@@ -1,8 +1,0 @@
-C:\Users\Jana.Townsend\engine\Server\GameServer\bin\Debug\GameServer.exe
-C:\Users\Jana.Townsend\engine\Server\GameServer\bin\Debug\GameServer.pdb
-C:\Users\Jana.Townsend\engine\Server\GameServer\obj\Debug\GameServer.exe
-C:\Users\Jana.Townsend\engine\Server\GameServer\obj\Debug\GameServer.pdb
-C:\Users\Jana.Townsend\engine\Server\GameServer\bin\Debug\GameFramework.dll
-C:\Users\Jana.Townsend\engine\Server\GameServer\bin\Debug\GameFramework.pdb
-C:\Users\Jana.Townsend\engine\Server\GameServer\obj\Debug\GameServer.csprojResolveAssemblyReference.cache
-C:\Users\Jana.Townsend\engine\Server\GameServer\bin\Debug\GameServer.exe.config
