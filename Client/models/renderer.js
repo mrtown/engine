@@ -43,16 +43,11 @@ var Renderer = (function() {
 
 		// renders hover indicator
 		if (selectedX >= 0 && selectedX < 10 && selectedY >= 0 && selectedY < 10) {
-			var X_OFFSET = 900;
-			var TILE_WIDTH = 128;
-			var TILE_HEIGHT = 64;
-			var TILE_WIDTH_HALF = TILE_WIDTH / 2;
-			var TILE_HEIGHT_HALF = TILE_HEIGHT / 2;
 
-			var isoX = (selectedX - selectedY) * TILE_WIDTH_HALF;
-			var isoY = (selectedX + selectedY) * TILE_HEIGHT_HALF;
+			var isoX = (selectedX - selectedY) * globalConstants.TILE_WIDTH_HALF;
+			var isoY = (selectedX + selectedY) * globalConstants.TILE_HEIGHT_HALF;
 
-			_this.context.drawImage(image, isoX - TILE_WIDTH_HALF + X_OFFSET, isoY);	
+			_this.context.drawImage(image, isoX - globalConstants.TILE_WIDTH_HALF + globalConstants.X_OFFSET, isoY);	
 		}
 	
 	}

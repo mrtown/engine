@@ -1,12 +1,7 @@
 var MapBuilder = (function() {
     
 	var mapBuilder = function() {
-		this.TILE_COUNT = 10;
-		this.X_OFFSET = 900;
-		this.TILE_WIDTH = 128;
-		this.TILE_HEIGHT = 64
-		this.TILE_WIDTH_HALF = this.TILE_WIDTH / 2;
-		this.TILE_HEIGHT_HALF = this.TILE_HEIGHT / 2;
+
 	}
 
 
@@ -20,16 +15,16 @@ var MapBuilder = (function() {
 		});
 
 		var drawOrder = -10000;
-		for(var x = 0; x < this.TILE_COUNT; x++)
-			for(var y = 0; y < this.TILE_COUNT; y++) {
-				var isoX = (x - y) * this.TILE_WIDTH_HALF;
-				var isoY = (x + y) * this.TILE_HEIGHT_HALF;
+		for(var x = 0; x < globalConstants.TILE_COUNT; x++)
+			for(var y = 0; y < globalConstants.TILE_COUNT; y++) {
+				var isoX = (x - y) * globalConstants.TILE_WIDTH_HALF;
+				var isoY = (x + y) * globalConstants.TILE_HEIGHT_HALF;
 				var tile = new Sprite({
 					texture: tileTexture,	
 					isLightable: false,
 					castsShadow: false,
 					drawOrder: drawOrder++,
-					x: isoX - this.TILE_WIDTH_HALF + this.X_OFFSET, 
+					x: isoX - globalConstants.TILE_WIDTH_HALF + globalConstants.X_OFFSET, 
 					y: isoY
 				});		
 				

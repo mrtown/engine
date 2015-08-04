@@ -6,6 +6,7 @@
 <script type="text/javascript" src="models/mapBuilder.js"></script>
 <script type="text/javascript" src="models/network.js"></script>
 <script type="text/javascript" src="models/gameClient.js"></script>
+<script type="text/javascript" src="models/globalConstants.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 
 
@@ -30,6 +31,7 @@
 	})(start);
 
 	// global initalization stuff
+	var globalConstants = new GlobalConstants();
 	var sprites = [];
 	var lights = [];
 	var mapBuilder = new MapBuilder();
@@ -76,12 +78,12 @@
 
 	function handleMouseMove(e) {
 
-		var mouseX = e.pageX - globalBoundingRectangle.left - mapBuilder.X_OFFSET;
+		var mouseX = e.pageX - globalBoundingRectangle.left - globalConstants.X_OFFSET;
 		var mouseY = e.pageY - globalBoundingRectangle.top;
 
 		// track the selected tile
-		selectedX = Math.floor((mouseX / mapBuilder.TILE_WIDTH_HALF + mouseY / mapBuilder.TILE_HEIGHT_HALF) / 2);
-		selectedY = Math.floor((mouseY / mapBuilder.TILE_HEIGHT_HALF - mouseX / mapBuilder.TILE_WIDTH_HALF) / 2);
+		selectedX = Math.floor((mouseX / globalConstants.TILE_WIDTH_HALF + mouseY / globalConstants.TILE_HEIGHT_HALF) / 2);
+		selectedY = Math.floor((mouseY / globalConstants.TILE_HEIGHT_HALF - mouseX / globalConstants.TILE_WIDTH_HALF) / 2);
 	}
 
 
