@@ -7,6 +7,7 @@
 <script type="text/javascript" src="models/network.js"></script>
 <script type="text/javascript" src="models/gameClient.js"></script>
 <script type="text/javascript" src="models/globalConstants.js"></script>
+<script type="text/javascript" src="models/textureLoader.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 
 
@@ -30,21 +31,10 @@
 		}
 	})(start);
 
-	// global initalization stuff
-	var globalConstants = new GlobalConstants();
-	var sprites = [];
-	var lights = [];
-	var mapBuilder = new MapBuilder();
-	var spriteBuilder = new SpriteBuilder();
-	var gameClient = new GameClient();
-
-	// build map
-	var tiles = mapBuilder.build();
-	sprites.push.apply(sprites, tiles);
-
-	// track the selected tile 
+	// enum services	
 	var selectedX;
 	var selectedY;
+	var globalConstants = new GlobalConstants();
 	var globalCanvas = document.getElementById("mainCanvas");
 	var globalContext = globalCanvas.getContext('2d');
 	var globalBoundingRectangle = globalCanvas.getBoundingClientRect();
@@ -52,8 +42,15 @@
 	// attach handlers
 	globalCanvas.onmousemove = handleMouseMove;
 
+	// load the textures 
+	var textureLoader = new TextureLoader();
+	textureLoader.load([
+		'block']);
+
 	function start() {	
 
+		var sprites = [];
+		var lights = [];
 		var gameClient = new GameClient();
 
 		// var network = new Network({
