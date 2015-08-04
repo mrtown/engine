@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 
-namespace Fleck.Samples.ConsoleApp
+using Fleck;
+
+namespace Server
 {
     class Server
     {
