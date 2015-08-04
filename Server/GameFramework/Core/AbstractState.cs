@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace GameFramework
+namespace GameFramework.Core
 {
-    public class Class1
+    class AbstractState
     {
     }
 }

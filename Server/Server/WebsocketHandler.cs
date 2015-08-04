@@ -4,16 +4,20 @@ using System.Linq;
 using System.Threading;
 
 using Fleck;
+using GameFramework.Core;
 
-namespace Server
+namespace WebsocketHandler
 {
-    class Server
+    public class WebsocketHandler
     {
+        private static Server gameServer = new Server();
+        
         static void Main()
         {
             FleckLog.Level = LogLevel.Debug;
             var allSockets = new List<IWebSocketConnection>();
             var server = new WebSocketServer("ws://0.0.0.0:8181");
+
             server.Start(socket =>
                 {
                     socket.OnOpen = () =>
@@ -29,21 +33,19 @@ namespace Server
                     socket.OnMessage = message =>
                         {
                             Console.WriteLine(message);
-                            allSockets.ToList().ForEach(s => s.Send("Echo: " + message));
+                            
+                            // process the message
+                            gameServer.MessageBroker.ProcessMessage(message);
+
+                            allSockets.ToList().ForEach(s => s.Send("Echo: "));
                         };
                 });
-
 
             var input = Console.ReadLine();
             while (input != "exit")
             {
-                foreach (var socket in allSockets.ToList())
-                {
-                    socket.Send(input);
-                }
                 input = Console.ReadLine();
             }
-
         }
     }
 }

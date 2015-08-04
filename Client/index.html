@@ -53,10 +53,10 @@
 		var lights = [];
 		var gameClient = new GameClient();
 
-		// var network = new Network({
-		// 	server: 'localhost:8181',
-		// 	processMessageCallback: gameClient.processResponse
-		// });
+		var network = new Network({
+			server: 'localhost:8181',
+			processMessageCallback: gameClient.processResponse
+		});
 
 		var renderer = new Renderer({
 			sprites: sprites,
