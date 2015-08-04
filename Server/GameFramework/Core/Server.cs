@@ -9,10 +9,12 @@ namespace GameFramework.Core
 {
     public class Server
     {
-
+        
+        
         //List<IWebSocketConnection> allSockets = new List<IWebSocketConnection>();
         //WebSocketServer server = new WebSocketServer("ws://0.0.0.0:8181");
         
+
        
 
         //server.Start(socket =>
