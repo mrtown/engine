@@ -35,7 +35,8 @@ namespace GameFramework.Core
             {
                 var message = _serializer.Deserialize<dynamic>(data);
                 AbstractGame game = _server.Games.Where(g => g.Id == message["gameId"]).First<AbstractGame>();
-                return game.processMessage(message);
+                game.State = game.State.ProcessMessage(message);
+                return game.SecuredGameState();
             }
             catch (Exception ex)
             {

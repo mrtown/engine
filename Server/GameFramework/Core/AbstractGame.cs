@@ -5,20 +5,11 @@ using System.Text;
 
 namespace GameFramework.Core
 {
-    public class AbstractGame
+    public abstract class AbstractGame
     {
-        public Guid Id { get; private set; }
-        public AbstractState State { get; private set; }
-        
-        public dynamic processMessage(dynamic message)
-        {
-
-            return BuildStateMessage();
-        }
-
-        private dynamic BuildStateMessage()
-        {
-            return null;
-        }
+        public Guid Id { get; protected set; }
+        public AbstractState State { get; set; }
+        public List<AbstractPlayer> Players { get; set; }
+        public abstract dynamic SecuredGameState();
     }
 }

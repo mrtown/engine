@@ -5,7 +5,14 @@ using System.Text;
 
 namespace GameFramework.Core
 {
-    public class AbstractState
+    public abstract class AbstractState
     {
+        public AbstractGame Game { get; set; }
+        public abstract AbstractState ProcessMessage(dynamic message);
+
+        public AbstractState(AbstractGame game)
+        {
+            Game = game;
+        }
     }
 }

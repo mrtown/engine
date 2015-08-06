@@ -5,7 +5,8 @@ using System.Text;
 
 namespace GameFramework.Core
 {
-    class AbstractPlayer
+    public class AbstractPlayer
     {
+        
     }
 }
