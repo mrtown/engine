@@ -2,16 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
+using System.Web.Script.Serialization;
+using Microsoft.CSharp.RuntimeBinder;
 
 using Fleck;
 using GameFramework.Core;
+
 
 namespace WebsocketHandler
 {
     public class WebsocketHandler
     {
         private static Server gameServer = new Server();
-        
+        private static JavaScriptSerializer _serializer = new JavaScriptSerializer();
+
         static void Main()
         {
             FleckLog.Level = LogLevel.Debug;
@@ -35,9 +39,9 @@ namespace WebsocketHandler
                             Console.WriteLine(message);
                             
                             // process the message
-                            gameServer.MessageBroker.ProcessMessage(message);
-
-                            allSockets.ToList().ForEach(s => s.Send("Echo: "));
+                            dynamic gameState = gameServer.MessageBroker.ProcessMessage(message);
+                            string serializedState = _serializer.Serialize(gameState);
+                            //allSockets.ToList().ForEach(s => s.Send("Echo: "));
                         };
                 });
 

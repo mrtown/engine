@@ -5,7 +5,7 @@ using System.Text;
 
 namespace GameFramework.Core
 {
-    class AbstractState
+    public class AbstractState
     {
     }
 }
