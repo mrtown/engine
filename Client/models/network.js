@@ -7,6 +7,7 @@ var Network = (function() {
 				this.server = args.server;
 				this.processMessageCallback;
 				this.webSocket = undefined;
+				this.loader = args.loader;
 		}
 		else
 			throw new Error('Network requires an argument hash');
@@ -28,6 +29,7 @@ var Network = (function() {
 
         this.webSocket.onopen = function() {
         	console.log('websocket connection established.');
+        	loader();
         }
 
         this.webSocket.onclose = function() {

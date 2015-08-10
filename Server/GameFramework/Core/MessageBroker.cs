@@ -4,7 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Web;
 using System.Web.Script.Serialization;
+using System.Reflection;
 using Microsoft.CSharp.RuntimeBinder;
+
 
             //var x = new {action = "buySomething", parameters = new Dictionary<string, string>()};
             //x.parameters.Add("playerRecipient", "Jana");
@@ -34,9 +36,15 @@ namespace GameFramework.Core
             try
             {
                 var message = _serializer.Deserialize<dynamic>(data);
-                AbstractGame game = _server.Games.Where(g => g.Id == message["gameId"]).First<AbstractGame>();
-                game.State = game.State.ProcessMessage(message);
-                return game.SecuredGameState();
+
+                if (message["action"] == "START_GAME")
+                    CreateGame(message);
+                else
+                {
+                    AbstractGame game = _server.Games.Where(g => g.Id == message["gameId"]).First<AbstractGame>();
+                    game.State = game.State.ProcessMessage(message);
+                    return game.SecuredGameState();
+                }
             }
             catch (Exception ex)
             {
@@ -45,6 +53,17 @@ namespace GameFramework.Core
 
             // fix this
             return null;
+
+        }
+
+        private void CreateGame(dynamic message)
+        {
+            // dynamically loadd assembly containing an imp[lementation of AbstractGame
+            Assembly assembly = Assembly.LoadFrom("..\\..\\..\\StrategyRPG\\bin\\debug\\StrategyRPG.dll");
+            Type type = assembly.GetType("StrategyRPG.Game");
+            var game = Activator.CreateInstance(type);
+
+            
 
         }
 

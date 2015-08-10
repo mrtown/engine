@@ -11,5 +11,11 @@ namespace GameFramework.Core
         public AbstractState State { get; set; }
         public List<AbstractPlayer> Players { get; set; }
         public abstract dynamic SecuredGameState();
+
+        public AbstractGame()
+        {
+            Id = Guid.NewGuid();
+            Players = new List<AbstractPlayer>();
+        }
     }
 }

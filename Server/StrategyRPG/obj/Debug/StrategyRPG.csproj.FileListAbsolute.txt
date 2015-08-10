@@ -1,0 +1,7 @@
+C:\Users\Jana.Townsend\engine\Server\StrategyRPG\obj\Debug\StrategyRPG.csprojResolveAssemblyReference.cache
+C:\Users\Jana.Townsend\engine\Server\StrategyRPG\bin\Debug\StrategyRPG.dll
+C:\Users\Jana.Townsend\engine\Server\StrategyRPG\bin\Debug\StrategyRPG.pdb
+C:\Users\Jana.Townsend\engine\Server\StrategyRPG\bin\Debug\GameFramework.dll
+C:\Users\Jana.Townsend\engine\Server\StrategyRPG\bin\Debug\GameFramework.pdb
+C:\Users\Jana.Townsend\engine\Server\StrategyRPG\obj\Debug\StrategyRPG.dll
+C:\Users\Jana.Townsend\engine\Server\StrategyRPG\obj\Debug\StrategyRPG.pdb

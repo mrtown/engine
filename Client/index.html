@@ -22,7 +22,7 @@
 	// define the loader
 	var loader = (function(init) {
 		var loadedImages = 0;
-		var totalImages = 2;
+		var totalImages = 3;
 
 		return function() {
 			loadedImages++;
@@ -47,16 +47,21 @@
 	textureLoader.load([
 		'block']);
 
+	// create game client and network manager
+	var gameClient = new GameClient();
+	var network = new Network({
+		server: 'localhost:8181',
+		processMessageCallback: gameClient.processResponse, 
+		loader: loader
+	});
+
 	function start() {	
 
 		var sprites = [];
 		var lights = [];
-		var gameClient = new GameClient();
 
-		var network = new Network({
-			server: 'localhost:8181',
-			processMessageCallback: gameClient.processResponse
-		});
+		var message = {action: 'START_GAME'};
+		network.sendMessage(JSON.stringify(message));
 
 		var renderer = new Renderer({
 			sprites: sprites,
